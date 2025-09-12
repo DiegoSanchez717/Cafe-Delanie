@@ -1,0 +1,176 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Playfair Display', sans-serif;
+}
+
+body, html {
+  height: 100%;
+  background-color: #D5521A;
+}
+
+body {
+  padding-top: 60px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 8%;
+  background-color: #1F1F1F;
+  color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  height: 95px;
+}
+
+.menu {
+  display: flex;
+  gap: 20px;
+}
+
+.navbar .menu a {
+  text-decoration: none;
+  color: #C3BC88;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.navbar .menu a:hover {
+  color:#D5521A;
+}
+
+.navbar .icons {
+  display: flex;
+  color: #C3BC88;
+  gap: 20px;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 1.2rem;
+}
+
+.navbar .icons i:hover {
+  color:#D5521A;
+}
+
+.menu-dropdown {
+  display: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* ------- Home ------- */
+
+.hero-carousel {
+  position: relative;
+  width: 100%;
+  height: calc(100vh - 60px);
+  overflow: hidden;
+}
+
+.carousel-container {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  height: 100%;
+}
+
+.carousel-slide {
+  min-width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 8%;
+  height: 100%;
+  color: white;
+  justify-content: space-between;
+}
+
+.carousel-slide .hero-content {
+  max-width: 50%;
+}
+
+.carousel-slide .hero-content h1 {
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+}
+
+.carousel-slide .hero-content p {
+  margin-bottom: 25px;
+  font-size: 1rem;
+}
+
+.carousel-slide .hero-content button {
+  background-color: #C3BC88;
+  color: #65752A;
+  border: none;
+  padding: 12px 30px;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 25px;
+  font-size: 1rem;
+}
+
+.carousel-slide .hero-content button:hover {
+  background-color: #1F1F1F;
+  color: #C3BC88;
+}
+
+.carousel-slide .hero-image {
+  max-width: 45%;
+  position: relative;
+}
+
+.carousel-slide .hero-image img {
+  width: 90%;
+  animation: floatUpDown 3s ease-in-out infinite;
+}
+
+@keyframes floatUpDown {
+  0%{transform: translateY(0px);}
+  50%{transform: translateY(-15px);}
+  100%{transform: translateY(0px);}
+}
+
+.price-badge {
+  position: absolute;
+  top: 20px;
+  right: -10px;
+  background-color: #65752A;
+  color:#D5521A;
+  border-radius: 50%;
+  padding: 15px 20px;
+  font-weight: bold;
+  font-size: 1rem;
+  box-shadow: 0 5x 10px rgba(0, 0, 0, 0.1);
+}
+
+.dots {
+  text-align: center;
+  position: absolute;
+  bottom: 25px;
+  width: 100%;
+  z-index: 10;
+}
+
+.dot {
+  background-color: #1F1F1F;
+  height: 14px;
+  width: 14px;
+  margin: 0 8px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  display: inline-block;
+}
+
+.dot:hover {
+  background-color: #65752A;
+  transform: scale(1.5);
+}
