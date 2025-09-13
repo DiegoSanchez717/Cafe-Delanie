@@ -17,3 +17,18 @@ dots.forEach((dot, idx) => {
   dot.addEventListener('click', () => showSlide(idx));
 });
 setInterval(() => showSlide(currentIndex + 1), 5000);
+
+const cartIcon = document.querySelector('.cart-icon');
+const cartSidebar = document.getElementById('cartSidebar')
+const cartOverlay = document.getElementById('cartOverlay')
+const closeCart = document.getElementById('closeCart')
+const cartItemsContainer = document.getElementById('cartItems');
+const cartTotal = document.getElementById('cartTotal');
+const cartCount = document.getElementById('cart-count');
+
+let cart = [];
+
+cartIcon.addEventListener('click', () => {
+  cartSidebar.classList.add('active');
+  cartOverlay.classList.add('active');
+});
